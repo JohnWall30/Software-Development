@@ -1,0 +1,65 @@
+import java.io.File;
+import java.util.Scanner;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Graphics;
+//import sun.awt.image.BufferedImageGraphicsConfig;
+
+public class ReadFile {
+
+    public static void main(final String[] args) {
+        //final String data = "Hello"
+        
+        checker(data);
+        /*
+         * System.out.println("Press Y to upload a text file. Press N to type directly."
+         * ); Scanner input = new Scanner(System.in); final String option =
+         * input.nextLine(); if ((option.charAt(0) == 'Y') || ((option.charAt(0) ==
+         * 'y')) || (option.charAt(0) == 'I')) { try {
+         * System.out.print("Enter the file name with extension : ");
+         * 
+         * final File file = new File(input.nextLine());
+         * 
+         * input = new Scanner(file); int count = 0;
+         * 
+         * while (input.hasNextLine()) { final String line = input.nextLine();
+         * System.out.println(line);
+         * 
+         * for (int i = 0; i < line.length(); i++) { if (line.charAt(i) != ' ') {
+         * count++; } } }
+         * 
+         * System.out.println("Count:" + count); if (count > 500) {
+         * System.out.println("error!!!"); System.exit(0); }
+         * 
+         * } catch (final Exception ex) { ex.printStackTrace(); } } else {
+         */
+
+    }
+
+    public static boolean checker(final String input)
+        {
+            try {
+                //  System.out.print("Enter Text: ");
+                  int count = 0;
+                 // final String word = input.nextLine();
+                  for(int x = 0; x < input.length(); x++)
+                  {
+                      count++;
+                  }
+                  System.out.println(count);
+  
+                  System.out.println("Count:" + count);
+                  if (count > 500) {
+                      System.out.println("error!!!");
+                      System.exit(0);
+                  }
+                  return true;
+
+              } catch ( final Exception ex) {
+                  ex.printStackTrace();
+                  
+              }return false;
+            }
+}
